@@ -45,7 +45,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgb(7, 7, 7);
 }
 
 /* :not(:required) hides these rules from IE9 and below */
@@ -142,20 +142,20 @@
   }
 }
       body {
-	/*background-color: #FFDAB9;	*/
+	/*background-color: ##d7fc06;	*/
 	background-color: #000;
-	-webkit-transition:background-color linear 5s;
-	-moz-transition:background-color linear 5s;
-	-o-transition:background-color linear 5s;
-	-ms-transition:background-color linear 5s;
-	transition:background-color linear 5s;
+	-webkit-transition: background 1.5s ease-in-out;
+	-moz-transition: background 1.5s ease-in-out;
+	-o-transition: background 1.5s ease-in-out;
+	-ms-transition: background 1.5s ease-in-out;
+	transition: background 1.5s ease-in-out;
 	overflow-x:hidden;
 }
 .container {
 	display: none;
 }
 .peach {
-	background-color: #FFDAB9;
+	background-color: ##d7fc06;
 	
 }
 .peach-after {
@@ -168,93 +168,92 @@
 
 @-webkit-keyframes peach_alive {
 	0%{
-		background-color: #FFDAB9;
+		background-color: ##d7fc06;
 	}
 	25%{
 		background-color: #FFE4B5;
 	}
 	50%{
-		background-color: #FFDAB9;
+		background-color: ##d7fc06;
 	}
 	75%{
 		background-color: #FFEFD5;
 	}
 	100%{
-		background-color: #FFDAB9;
+		background-color: ##d7fc06;
 	}
 }
 @-moz-keyframes peach_alive {
 	0%{
-		background-color: #FFDAB9;
+		background-color: ##d7fc06;
 	}
 	25%{
 		background-color: #FFE4B5;
 	}
 	50%{
-		background-color: #FFDAB9;
+		background-color: ##d7fc06;
 	}
 	75%{
 		background-color: #FFEFD5;
 	}
 	100%{
-		background-color: #FFDAB9;
+		background-color: ##d7fc06;
 	}
 }
 
 @-o-keyframes peach_alive {
 	0%{
-		background-color: #FFDAB9;
+		background-color: ##d7fc06;
 	}
 	25%{
 		background-color: #FFE4B5;
 	}
 	50%{
-		background-color: #FFDAB9;
+		background-color: ##d7fc06;
 	}
 	75%{
 		background-color: #FFEFD5;
 	}
 	100%{
-		background-color: #FFDAB9;
+		background-color: ##d7fc06;
 	}
 }
 
 @-ms-keyframes peach_alive {
 	0%{
-		background-color: #FFDAB9;
+		background-color: ##d7fc06;
 	}
 	25%{
 		background-color: #FFE4B5;
 	}
 	50%{
-		background-color: #FFDAB9;
+		background-color: ##d7fc06;
 	}
 	75%{
 		background-color: #FFEFD5;
 	}
 	100%{
-		background-color: #FFDAB9;
+		background-color: ##d7fc06;
 	}
 }
 
 @keyframes peach_alive {
 	0%{
-		background-color: #FFDAB9;
+		background-color: ##d7fc06;
 	}
 	25%{
 		background-color: #FFE4B5;
 	}
 	50%{
-		background-color: #FFDAB9;
+		background-color: ##d7fc06;
 	}
 	75%{
 		background-color: #FFEFD5;
 	}
 	100%{
-		background-color: #FFDAB9;
+		background-color: #d7fc06;
 	}
 }
-
 
 .bulb {
 	width: 50px;
@@ -1398,6 +1397,7 @@ audio {
 	opacity: 0.5;
 	z-index: 9999;
 }
+
 .control-panel {
 	position: fixed;
 	bottom: 0;
@@ -1443,7 +1443,11 @@ audio {
         background-color: #466baf;
     }
 
-
+    /* New style for the decorated state */
+    .decorated {
+        background: url('back.webp') no-repeat center center fixed;
+        background-size: cover;
+    }
 
     /*controlling tablet width*/
     /*@media only screen and (max-width: 720px){
@@ -1572,19 +1576,7 @@ audio {
 					<!-- <button class="btn btn-primary" id="cake_cut">Lrt's Cut the Cake</button> -->
 				</div>
 			</div>
-			<!-- <div class="col-md-2">
-			</div>
-			<div class="col-md-2">
-			</div>
-			<div class="col-md-2">
-			</div>
-			<div class="col-md-2">
-			</div>
-			<div class="col-md-2">
-			</div> -->
 		</div>
-
-
 	</div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -1599,5 +1591,13 @@ audio {
   ga('create', 'UA-58229732-1', 'auto');
   ga('send', 'pageview');
 
+  // Add this script to handle the decoration button click
+  $(document).ready(function() {
+    $('#bannar_coming').click(function() {
+      $('body').addClass('decorated');
+      // You can replace the image URL with your desired background image
+      // For example: $('body').css('background-image', 'url("your-image-url.jpg")');
+    });
+  });
 </script>
 </html>
