@@ -51,7 +51,21 @@
 			Always remember ,you are a princess,a sehzadi ,.............a absoulute devine creation of bhagwan ji<br />
 			<br>last tak dekhne ke liye ,inna time dene ke liye ,viswas karne ke li, sab ke liye THANKS 
 			<br>	now last,my buddhu please please tell me ,kaisa laga ,to downlad this page aap heart pe click kar sakte ho , inna kuch hone ke baad bhi time nikal kar ye banaya hu 🥹,bass yehi kehna tha ,AGAIN I LOVE YOU MY PRINCESS
-			<br> <span id="heartspan">
+			<br> <button onclick="downloadImage()">Download Image</button><br>
+
+<script>
+function downloadImage() {
+  const link = document.createElement('a');
+  link.href = 'Screenshot 2025-06-23 9.11.33 PM.png';
+  link.download = 'filename.jpg';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+</script>
+				<span id="heartspan">
+
+				
 			<a href="image.jpg"><i class="fas fa-heart" id="icon"></i></a>
 			</span>
 		</div>
